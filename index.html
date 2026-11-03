@@ -1,8 +1,32 @@
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python på GitHub Pages</title>
+    
+    <!-- Länka in PyScript CSS och JavaScript -->
+    <link rel="stylesheet" href="https://pyscript.net" />
+    <script type="module" src="https://pyscript.net"></script>
+</head>
   <body
     <h1>YOUR NAME</h1>
     <p>Welcome!</p>
     <!--<img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />-->
    <img src="https://api.trafikinfo.trafikverket.se/v2/Images/data/road.infrastructure.camera/RoadConditionCamera_VViS_2516_K1.jpg?type=fullsize"/>
+
+        <p>Nedan ser du resultatet av Python-kod som körs direkt i din webbläsare:</p>
+
+    <!-- Här visas utmatningen från Python -->
+    <div id="output"></div>
+
+    <!-- Här skriver du din Python-kod -->
+    <script type="py">
+        from pyscript import display
+        import datetime
+
+        # Skriv ut text till elementet med id="output"
+        nu = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        display(f"Hälsningar från Python! Klockan är just nu: {nu}", target="output")
+    </script>
   </body>
 </html>
